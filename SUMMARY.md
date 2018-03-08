@@ -7,9 +7,10 @@
 * [HTML](html/catalogue.md)
 
 * [CSS](css/catalogue.md)
-	* [选择器](css/选择器.md)
-	* [背景](css/背景.md)
+	* [选择器](css/choose.md)
+	* [背景](css/background.md)
 	* [边框和轮廓](css/border.md)
+	* [盒模型](css/boxModel.md)
 
 * [JavaScript](javascript/javascript.md)
 
@@ -21,6 +22,8 @@
 * [Node.js](java/catalogue.md)
 
 * [数据结构](data_structure/catalogue.md)
+* [微信端开发](wechat/catalogue.md)
+	* [微信第三方平台开发](wechat/three.md)
 
 * [2018](2018/catalogue.md)
 	* [3月UI菜鸟](2018/ui.md)
