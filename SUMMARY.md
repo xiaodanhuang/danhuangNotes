@@ -11,6 +11,7 @@
 	* [背景](css/background.md)
 	* [边框和轮廓](css/border.md)
 	* [盒模型](css/boxModel.md)
+	* [定位](css/position.md)
 
 * [JavaScript](javascript/javascript.md)
 
