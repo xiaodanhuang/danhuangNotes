@@ -12,6 +12,7 @@
 	* [边框和轮廓](css/border.md)
 	* [盒模型](css/boxModel.md)
 	* [定位](css/position.md)
+	* [文本属性](css/textProperty.md)
 
 * [JavaScript](javascript/javascript.md)
 

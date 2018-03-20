@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>选择器 · GitBook</title>
+        <title>文本属性 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="background.html" />
+    <link rel="next" href="../javascript/javascript.md" />
     
     
-    <link rel="prev" href="catalogue.html" />
+    <link rel="prev" href="position.html" />
     
 
     </head>
@@ -142,7 +142,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="choose.html">
+        <li class="chapter " data-level="1.4.1" data-path="choose.html">
             
                 <a href="choose.html">
             
@@ -207,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="textProperty.html">
+        <li class="chapter active" data-level="1.4.6" data-path="textProperty.html">
             
                 <a href="textProperty.html">
             
@@ -403,7 +403,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >选择器</a>
+        <a href=".." >文本属性</a>
     </h1>
 </div>
 
@@ -418,66 +418,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="css&#x9009;&#x62E9;&#x5668;">css&#x9009;&#x62E9;&#x5668;</h1>
-<h5 id="&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BB2;html&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x623F;&#x5B50;&#x7684;&#x67B6;&#x6784;&#xFF0C;css&#x7406;&#x89E3;&#x4E3A;&#x5BF9;&#x8FD9;&#x4E2A;&#x623F;&#x5B50;&#x8FDB;&#x884C;&#x88C5;&#x4FEE;&#x3002;&#x5728;css&#x4E2D;&#x9009;&#x62E9;&#x5668;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x9009;&#x62E9;&#x623F;&#x5B50;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x88C5;&#x4FEE;&#x3002;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x5C06;&#x95E8;&#x6D82;&#x6210;&#x7C89;&#x8272;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;">&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BB2;HTML&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x623F;&#x5B50;&#x7684;&#x67B6;&#x6784;&#xFF0C;css&#x7406;&#x89E3;&#x4E3A;&#x5BF9;&#x8FD9;&#x4E2A;&#x623F;&#x5B50;&#x8FDB;&#x884C;&#x88C5;&#x4FEE;&#x3002;&#x5728;css&#x4E2D;&#x9009;&#x62E9;&#x5668;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x9009;&#x62E9;&#x623F;&#x5B50;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x88C5;&#x4FEE;&#x3002;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x5C06;&#x95E8;&#x6D82;&#x6210;&#x7C89;&#x8272;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h5>
-<pre><code>.door{
-    background:pink;
+                                <h1 id="&#x6587;&#x672C;&#x5C5E;&#x6027;">&#x6587;&#x672C;&#x5C5E;&#x6027;</h1>
+<h6 id="color-&#x6587;&#x672C;&#x989C;&#x8272;">color &#x6587;&#x672C;&#x989C;&#x8272;</h6>
+<pre><code>p{
+    color:pink//&#x5B57;&#x7684;&#x989C;&#x8272;&#x8BBE;&#x7F6E;&#x4E3A;&#x7C89;&#x8272;
 }
-</code></pre><h5 id="css&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x9009;&#x62E9;&#x5668;">css&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x9009;&#x62E9;&#x5668;</h5>
-<h6 id="1id&#x9009;&#x62E9;&#x5668;">1.ID&#x9009;&#x62E9;&#x5668;</h6>
-<p>ID&#x9009;&#x62E9;&#x5668;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x7684;&#x8EAB;&#x4EFD;&#x8BC1;&#x4E00;&#x6837;&#xFF0C;&#x6BCF;&#x4E2A;HTML&#x5143;&#x7D20;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;ID&#xFF0C;&#x901A;&#x8FC7;ID&#x9009;&#x62E9;&#x5668;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x6B64;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;&#xFF0C;&#x5E76;&#x4EE5; &quot;#&quot; &#x6765;&#x5B9A;&#x4E49;&#x3002;&#x4F8B;&#x5982;&#x623F;&#x5B50;&#x7684;&#x524D;&#x95E8;&#x6211;&#x8981;&#x6D82;&#x6210;&#x9EC4;&#x8272;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>#front-door{
-    background:yello;
+</code></pre><h6 id="direction">direction</h6>
+<p>&#x8BBE;&#x7F6E;&#x6587;&#x672C;&#x65B9;&#x5411;</p>
+<pre><code>p{
+    direction:ltr;//&#x4ECE;&#x5DE6;&#x5230;&#x53F3;
+    direction:rtl;//&#x4ECE;&#x53F3;&#x5230;&#x5DE6;
 }
-</code></pre><h6 id="2class&#x9009;&#x62E9;&#x5668;">2.class&#x9009;&#x62E9;&#x5668;</h6>
-<p>class&#x5373;&#x4E3A;&#x7C7B;&#xFF0C;&#x9009;&#x4E2D;&#x4E00;&#x7C7B;&#x4E8B;&#x7269;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;&#xFF0C;&#x5E76;&#x4EE5; &quot;.&quot; &#x6765;&#x5B9A;&#x4E49;&#x3002;&#x4F8B;&#x5982;&#x623F;&#x5B50;&#x7684;&#x95E8;&#x6D82;&#x6210;&#x7C89;&#x8272;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0A;&#x3002;</p>
-<pre><code>.door{
-    background:pink;
+</code></pre><h6 id="letter-spacing-&#x5B57;&#x7B26;&#x95F4;&#x8DDD;">letter-spacing &#x5B57;&#x7B26;&#x95F4;&#x8DDD;</h6>
+<pre><code>p{
+    letter-spacing:2px;
+    letter-spacing:-2px;
 }
-</code></pre><h6 id="3&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;">3.&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;</h6>
-<p>&#x6B64;&#x9009;&#x62E9;&#x5668;&#x7684;&#x6807;&#x7B7E;&#x5C31;&#x662F;html&#x91CC;&#x9762;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>div{
-    text-align:center;//&#x6587;&#x5B57;&#x5C45;&#x4E2D;
+</code></pre><h6 id="line-height-&#x884C;&#x9AD8;">line-height &#x884C;&#x9AD8;</h6>
+<p>&#x884C;&#x9AD8;&#x4E0D;&#x53EF;&#x4E3A;&#x8D1F;&#x503C;</p>
+<pre><code>p{
+    line-height:20px
 }
-</code></pre><h6 id="3&#x901A;&#x7528;&#x9009;&#x62E9;&#x5668;">3.&#x901A;&#x7528;&#x9009;&#x62E9;&#x5668;</h6>
-<p>*&#x5C31;&#x662F;&#x901A;&#x7528;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x62E9;&#x5668;&#x9009;&#x4E2D;&#x7684;&#x662F;&#x5168;&#x90E8;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
-<pre><code>*{
-    margin: 0px auto;//&#x5C45;&#x4E2D;
+</code></pre><h6 id="text-align-&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;">text-align &#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</h6>
+<p>left:&#x6587;&#x5B57;&#x5DE6;&#x5BF9;&#x9F50;&#xFF0C;center&#xFF1A;&#x6587;&#x5B57;&#x5C45;&#x4E2D;&#xFF0C;right&#xFF1A;&#x6587;&#x5B57;&#x53F3;&#x5BF9;&#x9F50;</p>
+<h6 id="text-decoration">text-decoration</h6>
+<ol>
+<li>overline:&#x4E0A;&#x5212;&#x7EBF;</li>
+<li>line-through &#x4E2D;&#x95F4;&#x5212;&#x7EBF;</li>
+<li>underline&#xFF1A;&#x4E0B;&#x5212;&#x7EBF;</li>
+</ol>
+<h6 id="text-indent">text-indent</h6>
+<p>&#x9996;&#x884C;&#x7F29;&#x8FDB;</p>
+<pre><code>p{
+    text-indent:4px;
 }
-</code></pre><h6 id="4&#x5B50;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;">4.&#x5B50;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;</h6>
-<p>&#x5B50;&#x9009;&#x62E9;&#x5668;&#x9009;&#x62E9;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;&#x9009;&#x62E9;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x540E;&#x4EE3;&#x5143;&#x7D20;&#xFF0C;&#x5B50;&#x5B50;&#x5B59;&#x5B59;&#x90FD;&#x9009;&#x62E9;&#x3002;</p>
-<pre><code>.house&gt;div{
-    //&#x5B50;&#x9009;&#x62E9;&#x5668;
+</code></pre><h6 id="text-shadow-&#x6587;&#x672C;&#x9634;&#x5F71;">text-shadow &#x6587;&#x672C;&#x9634;&#x5F71;</h6>
+<p>text-shadow: h-shadow v-shadow blur color;</p>
+<ol>
+<li>h-shadow:&#x6C34;&#x5E73;&#x9634;&#x5F71;&#x4F4D;&#x7F6E;</li>
+<li>v-shadow&#xFF1A;&#x5782;&#x76F4;&#x9634;&#x5F71;&#x4F4D;&#x7F6E;</li>
+<li>&#x6A21;&#x7CCA;&#x8DDD;&#x79BB;</li>
+<li>&#x9634;&#x5F71;&#x989C;&#x8272;</li>
+</ol>
+<pre><code>p{
+    text-shadow:2px 20px pink;
 }
-.house div{
-    //&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;
+</code></pre><h6 id="text-transform">text-transform</h6>
+<ol>
+<li>capitalize&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;</li>
+<li>uppercase&#x5168;&#x5927;&#x5199;</li>
+<li>lowercase&#x5168;&#x5C0F;&#x5199;</li>
+</ol>
+<h6 id="vertical-align">vertical-align</h6>
+<p>1.text-top
+2.text-bottom
+3.middle</p>
+<h6 id="white-space--&#x7A7A;&#x767D;&#x5904;&#x7406;">white-space  &#x7A7A;&#x767D;&#x5904;&#x7406;</h6>
+<p>1.normal&#x7A7A;&#x767D;&#x81EA;&#x52A8;&#x5FFD;&#x7565;
+2.pre &#x4FDD;&#x7559;&#x7A7A;&#x767D;
+3.nowrap &#x4E0D;&#x6362;&#x884C;
+4.pre &#x4FDD;&#x7559;&#x7A7A;&#x767D; &#x6B63;&#x5E38;&#x6362;&#x884C;
+5.pre-line &#x5408;&#x5E76;&#x7A7A;&#x767D; &#x4FDD;&#x7559;&#x6362;&#x884C;&#x7B26;</p>
+<h6 id="word-spacing">word-spacing</h6>
+<pre><code>p{ 
+    word-spacing:30px;
 }
-</code></pre><h6 id="5&#x76F4;&#x63A5;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;">5.&#x76F4;&#x63A5;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;</h6>
-<p>&#x76F4;&#x63A5;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;&#x9009;&#x4E2D;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x540E;&#x9762;&#x7684;&#x72EC;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#xFF0C;&#x5144;&#x5F1F;&#x9009;&#x62E9;&#x5668;&#x9009;&#x4E2D;&#x7684;&#x662F;&#x6240;&#x6709;&#x5144;&#x5F1F;&#x3002;</p>
-<pre><code>.table+desk{
-//&#x684C;&#x5B50;&#x540E;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x6905;&#x5B50;
-}
-.table~desk{
-//&#x684C;&#x5B50;&#x540E;&#x9762;&#x6240;&#x6709;&#x7684;&#x6905;&#x5B50;
-}
-</code></pre><h5 id="6-&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;">6. &#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;</h5>
-<p>&#x5E38;&#x89C1;&#x4F2A;&#x7C7B;&#xFF1A;
-&#x951A;&#x70B9; :link,:hover,:active,:focus,:visited
-&#x8868;&#x5355;&#x5143;&#x7D20;&#xFF1A;enabled&#x3001;:disabled&#x3001;:checked
-&#x7ED3;&#x6784;&#x4F2A;&#x7C7B;&#xFF1A;
-1,:nth-child(n)&#x3001;:nth-last-child(n)&#x3001;first-child&#x3001;last-child&#x3001;:only-child
-2,:nth-of-type(n)&#x3001;:nth-last-of-type(n)&#x3001;:first-of-type&#x3001;:last-of-type&#x3001;:only-of-type
-3,:root&#x3001;:not&#x3001;:empty&#x3001;:target</p>
-<h5 id="7&#x4F2A;&#x5143;&#x7D20;">7.&#x4F2A;&#x5143;&#x7D20;</h5>
-<p>:before ,:after</p>
-<h5 id="8&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;">8.&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;</h5>
-<pre><code>[attribute]            &#x7528;&#x4E8E;&#x9009;&#x53D6;&#x5E26;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x5143;&#x7D20;&#x3002;
-[attribute=value]    &#x7528;&#x4E8E;&#x9009;&#x53D6;&#x5E26;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x548C;&#x503C;&#x7684;&#x5143;&#x7D20;&#x3002;
-[attribute~=value]    &#x7528;&#x4E8E;&#x9009;&#x53D6;&#x5C5E;&#x6027;&#x503C;&#x4E2D;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x8BCD;&#x6C47;&#x7684;&#x5143;&#x7D20;&#x3002;
-[attribute|=value]    &#x7528;&#x4E8E;&#x9009;&#x53D6;&#x5E26;&#x6709;&#x4EE5;&#x6307;&#x5B9A;&#x503C;&#x5F00;&#x5934;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x8BE5;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x6574;&#x4E2A;&#x5355;&#x8BCD;&#x3002;
-[attribute^=value]    &#x5339;&#x914D;&#x5C5E;&#x6027;&#x503C;&#x4EE5;&#x6307;&#x5B9A;&#x503C;&#x5F00;&#x5934;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x3002;
-[attribute$=value]    &#x5339;&#x914D;&#x5C5E;&#x6027;&#x503C;&#x4EE5;&#x6307;&#x5B9A;&#x503C;&#x7ED3;&#x5C3E;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x3002;
-[attribute*=value]    &#x5339;&#x914D;&#x5C5E;&#x6027;&#x503C;&#x4E2D;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x503C;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x3002;
 </code></pre>
                                 
                                 </section>
@@ -505,12 +510,12 @@
 
             
                 
-                <a href="catalogue.html" class="navigation navigation-prev " aria-label="Previous page: CSS">
+                <a href="position.html" class="navigation navigation-prev " aria-label="Previous page: 定位">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="background.html" class="navigation navigation-next " aria-label="Next page: 背景">
+                <a href="../javascript/javascript.md" class="navigation navigation-next " aria-label="Next page: JavaScript">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -521,7 +526,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"选择器","level":"1.4.1","depth":2,"next":{"title":"背景","level":"1.4.2","depth":2,"path":"css/background.md","ref":"css/background.md","articles":[]},"previous":{"title":"CSS","level":"1.4","depth":1,"path":"css/catalogue.md","ref":"css/catalogue.md","articles":[{"title":"选择器","level":"1.4.1","depth":2,"path":"css/choose.md","ref":"css/choose.md","articles":[]},{"title":"背景","level":"1.4.2","depth":2,"path":"css/background.md","ref":"css/background.md","articles":[]},{"title":"边框和轮廓","level":"1.4.3","depth":2,"path":"css/border.md","ref":"css/border.md","articles":[]},{"title":"盒模型","level":"1.4.4","depth":2,"path":"css/boxModel.md","ref":"css/boxModel.md","articles":[]},{"title":"定位","level":"1.4.5","depth":2,"path":"css/position.md","ref":"css/position.md","articles":[]},{"title":"文本属性","level":"1.4.6","depth":2,"path":"css/textProperty.md","ref":"css/textProperty.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"css/choose.md","mtime":"2018-03-05T09:14:38.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-20T07:46:30.440Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文本属性","level":"1.4.6","depth":2,"next":{"title":"JavaScript","level":"1.5","depth":1,"path":"javascript/javascript.md","ref":"javascript/javascript.md","articles":[]},"previous":{"title":"定位","level":"1.4.5","depth":2,"path":"css/position.md","ref":"css/position.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"css/textProperty.md","mtime":"2018-03-20T07:32:26.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-20T07:46:30.440Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
