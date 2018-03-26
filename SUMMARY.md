@@ -14,14 +14,16 @@
 	* [定位](css/position.md)
 	* [文本属性](css/textProperty.md)
 
-* [JavaScript](javascript/javascript.md)
+* [JavaScript](javascript/catalogue.md)
+	* [JavaScript简介](javascript/introduction.md)
+	* [基本概念](javascript/common.md)
 
 * [React](react/catalogue.md)
 
 * [Redux](redux/catalogue.md)
 	* [Redux基础](redux/简介.md)
 
-* [Node.js](java/catalogue.md)
+* [Node.js](nodejs/catalogue.md)
 
 * [数据结构](data_structure/catalogue.md)
 * [微信端开发](wechat/catalogue.md)
