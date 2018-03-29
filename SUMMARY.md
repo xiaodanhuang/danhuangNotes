@@ -18,6 +18,7 @@
 	* [JavaScript简介](javascript/introduction.md)
 	* [基本概念](javascript/common.md)
 	* [变量，作用域，内存](javascript/variableScope.md)
+	* [引用类型](javascript/referenceType.md)
 
 * [React](react/catalogue.md)
 
