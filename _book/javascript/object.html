@@ -497,10 +497,12 @@
 <li>&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF1A;configurable,Enumerable,writable,value</li>
 <li>&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7279;&#x6027;&#x8BF7;&#x4F7F;&#x7528;Object.defineProperty&#xFF0C;Object.definePropertys</li>
 <li>&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#xFF1A;setter&#xFF0C;getter,<code>_year</code>&#x6807;&#x8BB0;&#x4E0B;&#x5212;&#x7EBF;&#x8868;&#x793A;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;</li>
-<li>&#x53D6;&#x8BFB;&#x5C5E;&#x6027;&#x7279;&#x6027;&#xFF1A;Object.getOwnPropertyDescriptor<h6 id="&#x521B;&#x5EFA;&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</h6>
-</li>
+<li>&#x53D6;&#x8BFB;&#x5C5E;&#x6027;&#x7279;&#x6027;&#xFF1A;Object.getOwnPropertyDescriptor</li>
 </ol>
 </li>
+</ul>
+<h6 id="&#x521B;&#x5EFA;&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</h6>
+<ol>
 <li>&#x5DE5;&#x5382;&#x6A21;&#x5F0F;<pre><code>function  createObj(name,age){
  var obj =new Object();
  obj.name=name;
@@ -553,7 +555,51 @@ constructor : Person,
 }
 </code></pre><h6 id="&#x7EE7;&#x627F;&#x5BF9;&#x8C61;">&#x7EE7;&#x627F;&#x5BF9;&#x8C61;</h6>
 </li>
-</ul>
+<li>&#x539F;&#x578B;&#x94FE;<pre><code>function SurperPerson(){this.name=&apos;danhuang&apos;}
+SurperPerson.prototype.getName=function(){ return this.name}
+function Person(sex){this.sex=sex }
+Person.prototype=new SurperPerson()
+a =new Person(&apos;boy&apos;)
+a.name//danhuang
+</code></pre></li>
+<li>&#x501F;&#x7528;&#x6784;&#x9020;&#x6A21;&#x5F0F;<pre><code>function SurperPerson(){this.name=[&apos;danhuang&apos;]}
+function Person(){ SurperPerson.call(this);
+}
+a =new Person()
+a.name.push(&apos;haha&apos;)//Person {name: Array(2)}
+b=new Person()//Person {name: Array(1)}
+</code></pre></li>
+<li>&#x7EC4;&#x5408;&#x7EE7;&#x627F;&#x6A21;&#x5F0F;<pre><code>function SurperPerson(name){this.name=name}
+SurperPerson.prototype.getName=function(){ return this.name}
+function Person(name,age){ 
+  SurperPerson.call(this,name);
+  this.age=age
+}
+</code></pre></li>
+<li>&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;<pre><code>function createObj(obj){ function F(){}; F.prototype=obj; return new F()}
+person={name:&apos;danhuang&apos;, age:18,work:[]}
+a =createObj(person)
+a.work.push(&apos;web&apos;)
+b=createObj(person)
+b.work//[&quot;web&quot;]
+</code></pre></li>
+<li>&#x5BC4;&#x751F;&#x7EE7;&#x627F;<pre><code>function createObj(obj){ 
+var obj= Object(obj);
+obj.sayhi=function(){console.log(obj.name)};
+return obj}
+obj={name:&apos;danhuang&apos;,age:13}
+</code></pre></li>
+<li>&#x7EC4;&#x5408;&#x5BC4;&#x751F;&#x7EE7;&#x627F;<pre><code>function SurperPerson(name){this.name=name;this.color=[]}
+SurperPerson.prototype.getName=function(){ return this.name};
+function Person(name,age){ 
+  SurperPerson.call(this,name);
+  this.age=age;
+  }
+Person.prototype=new SurperPerson();
+Person.prototype.construcor=Person;
+Person.prototyp.sayName=function(){console.log(this.name)}
+</code></pre></li>
+</ol>
 
                                 
                                 </section>
@@ -597,7 +643,7 @@ constructor : Person,
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"面向对象的程序设计","level":"1.5.5","depth":2,"next":{"title":"React","level":"1.6","depth":1,"path":"react/catalogue.md","ref":"react/catalogue.md","articles":[]},"previous":{"title":"引用类型","level":"1.5.4","depth":2,"path":"javascript/referenceType.md","ref":"javascript/referenceType.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/object.md","mtime":"2018-03-30T09:48:12.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-30T03:35:37.172Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"面向对象的程序设计","level":"1.5.5","depth":2,"next":{"title":"React","level":"1.6","depth":1,"path":"react/catalogue.md","ref":"react/catalogue.md","articles":[]},"previous":{"title":"引用类型","level":"1.5.4","depth":2,"path":"javascript/referenceType.md","ref":"javascript/referenceType.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/object.md","mtime":"2018-04-02T11:39:28.702Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T06:25:17.097Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
