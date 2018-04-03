@@ -20,6 +20,7 @@
 	* [变量，作用域，内存](javascript/variableScope.md)
 	* [引用类型](javascript/referenceType.md)
 	* [面向对象的程序设计](javascript/object.md)
+	* [函数表达式](javascript/objectExpress.md)
 
 * [React](react/catalogue.md)
 

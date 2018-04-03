@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Redux基础 · GitBook</title>
+        <title>函数表达式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../nodejs/catalogue.html" />
+    <link rel="next" href="../react/catalogue.html" />
     
     
-    <link rel="prev" href="catalogue.html" />
+    <link rel="prev" href="object.html" />
     
 
     </head>
@@ -225,9 +225,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../javascript/catalogue.html">
+        <li class="chapter " data-level="1.5" data-path="catalogue.html">
             
-                <a href="../javascript/catalogue.html">
+                <a href="catalogue.html">
             
                     
                     JavaScript
@@ -239,9 +239,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../javascript/introduction.html">
+        <li class="chapter " data-level="1.5.1" data-path="introduction.html">
             
-                <a href="../javascript/introduction.html">
+                <a href="introduction.html">
             
                     
                     JavaScript简介
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../javascript/common.html">
+        <li class="chapter " data-level="1.5.2" data-path="common.html">
             
-                <a href="../javascript/common.html">
+                <a href="common.html">
             
                     
                     基本概念
@@ -265,9 +265,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../javascript/variableScope.html">
+        <li class="chapter " data-level="1.5.3" data-path="variableScope.html">
             
-                <a href="../javascript/variableScope.html">
+                <a href="variableScope.html">
             
                     
                     变量，作用域，内存
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../javascript/referenceType.html">
+        <li class="chapter " data-level="1.5.4" data-path="referenceType.html">
             
-                <a href="../javascript/referenceType.html">
+                <a href="referenceType.html">
             
                     
                     引用类型
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../javascript/object.html">
+        <li class="chapter " data-level="1.5.5" data-path="object.html">
             
-                <a href="../javascript/object.html">
+                <a href="object.html">
             
                     
                     面向对象的程序设计
@@ -304,9 +304,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="../javascript/objectExpress.html">
+        <li class="chapter active" data-level="1.5.6" data-path="objectExpress.html">
             
-                <a href="../javascript/objectExpress.html">
+                <a href="objectExpress.html">
             
                     
                     函数表达式
@@ -335,9 +335,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="catalogue.html">
+        <li class="chapter " data-level="1.7" data-path="../redux/catalogue.html">
             
-                <a href="catalogue.html">
+                <a href="../redux/catalogue.html">
             
                     
                     Redux
@@ -349,9 +349,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="简介.html">
+        <li class="chapter " data-level="1.7.1" data-path="../redux/简介.html">
             
-                <a href="简介.html">
+                <a href="../redux/简介.html">
             
                     
                     Redux基础
@@ -487,7 +487,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Redux基础</a>
+        <a href=".." >函数表达式</a>
     </h1>
 </div>
 
@@ -502,42 +502,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="redux&#x57FA;&#x7840;">Redux&#x57FA;&#x7840;</h1>
-<h4 id="redux">Redux</h4>
-<p>Redux&#x662F;&#x6570;&#x636E;&#x50A8;&#x5B58;&#x4EE5;&#x53CA;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x7684;&#x5BB9;&#x5668;&#x3002;&#x6211;&#x628A;&#x5B83;&#x7406;&#x89E3;&#x4E3A;&#x524D;&#x7AEF;&#x5C0F;&#x578B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
-<h3 id="redux&#x8BBE;&#x8BA1;&#x6838;&#x5FC3;">Redux&#x8BBE;&#x8BA1;&#x6838;&#x5FC3;</h3>
-<p>&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;
-&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;
-1.&#x8C03;&#x7528;store.dispatch()&#xFF0C;&#x53D1;&#x751F;&#x52A8;&#x4F5C;</p>
-<h3 id="store">Store</h3>
-<p>&#x6211;&#x4EEC;&#x5728;Store&#x4E2D;&#x50A8;&#x5B58;&#x6570;&#x636E;&#x3002;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;Store&#x3002;</p>
-<h3 id="state">State</h3>
-<p>State&#x5373;&#x72B6;&#x6001;&#xFF0C;&#x67D0;&#x65F6;&#x523B;&#x4E0B;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#x3002;&#x5207;&#x8BB0;State&#x5177;&#x6709;&#x53EA;&#x8BFB;&#x6027;&#xFF0C;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x3002;</p>
-<h4 id="action&#x3010;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3011;">Action&#x3010;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3011;</h4>
-<p>Action&#x662F;&#x6570;&#x636E;&#x4ECE;&#x5E94;&#x7528;&#x5230;store&#x7684;&#x901A;&#x9053;&#x3002;&#x5B83;&#x662F;store&#x6570;&#x636E;&#x7684;&#x552F;&#x4E00;&#x6765;&#x6E90;&#x3002;&#x4E00;&#x822C;&#x901A;&#x8FC7;action&#x4F20;&#x9012;&#x5230;store&#x3002;Action&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x8BB2;&#x6267;&#x884C;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x4EE5;&#x53CA;&#x643A;&#x5E26;&#x7684;&#x53C2;&#x6570;&#x3002;type&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#xFF0C;&#x5F53;&#x5E94;&#x7528;&#x89C4;&#x6A21;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x6A21;&#x5757;&#x5B58;&#x653E;action</p>
-<pre><code>const ADD_TODO=&quot;add todo&quot;
-{
-    type:Add_TODO,
-    txet:&quot;&#x5B66;&#x4E60;Redux&quot;
+                                <h3 id="&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;">&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<h6 id="&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7279;&#x5F81;">&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7279;&#x5F81;</h6>
+<pre><code>var sayName=function (name){console.log(name)}
+</code></pre><h6 id="&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x9012;&#x5F52;">&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x9012;&#x5F52;</h6>
+<ul>
+<li>&#x51FD;&#x6570;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x7528;arguments.callee&#x4EE3;&#x66FF;</li>
+</ul>
+<h6 id="&#x4F7F;&#x7528;&#x95ED;&#x5305;&#x5B9A;&#x4E49;&#x79C1;&#x6709;&#x53D8;&#x91CF;">&#x4F7F;&#x7528;&#x95ED;&#x5305;&#x5B9A;&#x4E49;&#x79C1;&#x6709;&#x53D8;&#x91CF;</h6>
+<ul>
+<li>&#x95ED;&#x5305;&#x662F;&#x6709;&#x6743;&#x8BBF;&#x95EE;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x53D8;&#x91CF;&#x7684;&#x51FD;&#x6570;</li>
+<li>&#x95ED;&#x5305;&#x53EA;&#x80FD;&#x53D6;&#x5F97;&#x51FD;&#x6570;&#x4E2D;&#x4EFB;&#x4F55;&#x53D8;&#x91CF;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;<pre><code>function createFunctions(){
+  var result = new Array();
+  for (var i=0; i &lt; 10; i++){
+      result[i] = function(){
+      return i;
+      };
+  }
+  return result;
 }
-</code></pre><h3 id="action-creator">Action Creator</h3>
-<p>Action creator &#x5C31;&#x662F;&#x751F;&#x6210;action&#x7684;&#x65B9;&#x6CD5;&#x3002;
-```
-function addTodo&#xFF08;text&#xFF09;{
-    return {
-        type:Add_TODO,
-        text:text
-    }
-}</p>
-<h3 id="reducer">Reducer</h3>
-<p>Reducer&#xFF1A;&#x6307;&#x660E;&#x5982;&#x4F55;&#x66F4;&#x65B0;state&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x63A5;&#x53D7;Action&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x7684;State&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;State&#x3002;
-&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;reducer&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x5FC5;&#x5B9A;&#x5F97;&#x5230;&#x540C;&#x6837;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
-<h3 id="storesubscribe">store.subscribe()</h3>
-<p>State&#x76D1;&#x542C;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x65E6;State&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x6B64;&#x51FD;&#x6570;&#x3002;</p>
-<h3 id="redux&#x4E09;&#x90E8;&#x66F2;">Redux&#x4E09;&#x90E8;&#x66F2;</h3>
-<p>1.&#x521B;&#x5EFA;store
-2.&#x521B;&#x5EFA;action
-3.&#x521B;&#x5EFA;reducer</p>
+function createFunctions(){
+  var result = new Array();
+  for (var i=0; i &lt; 10; i++){
+      result[i] = function(num){
+      return function(){
+      return num;
+      };
+  }(i);
+  }
+  return result;
+}
+</code></pre></li>
+<li>&#x7ACB;&#x5373;&#x6267;&#x884C;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x6A21;&#x4EFF;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;</li>
+</ul>
 
                                 
                                 </section>
@@ -565,12 +562,12 @@ function addTodo&#xFF08;text&#xFF09;{
 
             
                 
-                <a href="catalogue.html" class="navigation navigation-prev " aria-label="Previous page: Redux">
+                <a href="object.html" class="navigation navigation-prev " aria-label="Previous page: 面向对象的程序设计">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../nodejs/catalogue.html" class="navigation navigation-next " aria-label="Next page: Node.js">
+                <a href="../react/catalogue.html" class="navigation navigation-next " aria-label="Next page: React">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -581,7 +578,7 @@ function addTodo&#xFF08;text&#xFF09;{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Redux基础","level":"1.7.1","depth":2,"next":{"title":"Node.js","level":"1.8","depth":1,"path":"nodejs/catalogue.md","ref":"nodejs/catalogue.md","articles":[]},"previous":{"title":"Redux","level":"1.7","depth":1,"path":"redux/catalogue.md","ref":"redux/catalogue.md","articles":[{"title":"Redux基础","level":"1.7.1","depth":2,"path":"redux/简介.md","ref":"redux/简介.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/简介.md","mtime":"2018-03-02T08:12:06.071Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T06:25:17.097Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"函数表达式","level":"1.5.6","depth":2,"next":{"title":"React","level":"1.6","depth":1,"path":"react/catalogue.md","ref":"react/catalogue.md","articles":[]},"previous":{"title":"面向对象的程序设计","level":"1.5.5","depth":2,"path":"javascript/object.md","ref":"javascript/object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/objectExpress.md","mtime":"2018-04-03T07:23:22.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T06:25:17.097Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
