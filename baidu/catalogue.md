@@ -38,6 +38,7 @@
 ###### JavaScript，跟java没多大关系，可以让页面与我有的互动性增加的一个非常可爱的语言。
 ###### vue，官网说是渐进式的js框架。我的理解是上手比较快，各种api。
 ###### react，官网说是用于构建用户界面的 JavaScript 库。我的理解是上手有点难度，但是上手后你会爱他的。
+###### 都提交了才发现自己没有写nodejs，nodejs简单的说就是运行在服务端的javascript，nodejs能做的事情可多了，比如操作数据库，爬虫等等。反正很厉害，我最渣😭
 <img width='100px' src='http://osz5qtl3g.bkt.clouddn.com/note_baidu_base_end.jpeg'/>
 ###### 2018年4月25日
 -正在实习的蛋黄
