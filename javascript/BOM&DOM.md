@@ -73,10 +73,17 @@ history.length
 - getElementByClassName
 - add/remove/contains/toggle 类操作
 - focus/hasfocus 焦点有关函数
+
 ###### 专有扩展
 - 文档模式 doctype
-##### DOM2
-##### DOM3
+
+##### DOM2，DOM3
+###### DOM变化
+###### 样式
+###### 遍历
+使用NodeItxerator/TreeWalker 进行深度遍历
+范围
+
 
 
 
