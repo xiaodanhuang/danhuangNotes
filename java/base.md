@@ -1,4 +1,4 @@
-### Java基本概念
+### Head First Java
 #### Java大法好
 - 特性：面向对象，内存管理，跨平台可移植性顶呱呱。
 - 工作方式：源代码->编译器->输出->JVM(java虚拟机)
@@ -24,4 +24,24 @@
 ###### 实例变量以及局部变量的区别
 1. 实例变量在类中，局部变量在方法中
 2. 局部变量必须初始化
+
+###### 变量的比较
+1. ==比较的是两个变量的字节组合。比较引用类型时，判断两个引用是否指向同一个对象。
+
+##### Java的API
+###### ArrayList 高级类动态的数组
+```
+ArrayList<String>  list=new ArrayList <String>();
+list.add("dahuang");//添加元素
+list.size(); //元素个数
+list.remove("danhuang");移除元素
+list.remove(0);在引索参数中移除元素
+list.contains("dahuang");//匹配则true
+list.indexOf("dahuang");//返回引索，无则返-1
+list.get(0);返回引索对应的元素
+list.isEmpty();//是否为空，空则返true
+```
+##### 继承和多态
+##### 接口和抽象类
+ 
 

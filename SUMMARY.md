@@ -3,6 +3,7 @@
 * [以梦为马，不负韶华](https://xiaodanhuang.github.io/build)
 * [Introduction](README.md)
 * [百度前端学院](baidu/catalogue.md)
+* [HTML](html/catalogue.md)
 
 * [CSS](css/catalogue.md)
     * [选择器](css/choose.md)
