@@ -4,6 +4,7 @@
 * [Introduction](README.md)
 * [百度前端学院](baidu/catalogue.md)
 * [HTML](html/catalogue.md)
+* [HTML5](html5/catalogue.md)
 * [three.js](three/catalogue.md)
 * [CSS](css/catalogue.md)
     * [选择器](css/choose.md)
