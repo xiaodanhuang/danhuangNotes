@@ -7,7 +7,6 @@
 * [HTML5](html5/catalogue.md)
 * [three.js](three/catalogue.md)
 * [CSS](css/catalogue.md)
-	* [动画](css/animation.md)
     * [选择器](css/choose.md)
     * [背景](css/background.md)
     * [边框和轮廓](css/border.md)
