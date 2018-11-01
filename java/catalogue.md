@@ -1,2 +1,3 @@
-#### Java从入职到跑路
-组里一个java跑路了...本渣要顶上...加油加油
+#### Java笔记
+####教材thinking in Java
+* [基本概念](java/base.md)
