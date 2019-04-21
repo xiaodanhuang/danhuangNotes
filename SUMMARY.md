@@ -4,4 +4,5 @@
 * [Introduction](README.md)
 * [数据结构](shu-ju-jie-gou.md)
   * [线性表](shu-ju-jie-gou/lian-biao.md)
+  * [栈和队列](shu-ju-jie-gou/zhan-he-dui-lie.md)
 
