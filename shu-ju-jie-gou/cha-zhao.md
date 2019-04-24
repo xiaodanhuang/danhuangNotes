@@ -79,5 +79,35 @@ console.log(arr)
 
 -2019.04.21
 
+#### 4.希尔排序ps:这个排序忘记怎么写了又看书了
+
+原理：取增量，进行分组排，再进行插入排序
+
+```js
+function shellSort(arr,gap){
+    while(gap) {
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i; j >gap-1; j-=gap) {
+                if (arr[j] <arr[j-gap]) {
+                    swap(arr, j-gap, j)
+                }
+            }
+        }
+       gap=Math.floor(gap/2)
+    }
+}
+function swap(arr,i,j){
+    var current=arr[i];
+    arr[i]=arr[j]
+    arr[j]=current
+}
+
+var arr=[7,6,9,4,0,5]
+shellSort(arr,10)
+console.log(arr)
+```
+
+#### 5.归并排序
+
 
 
