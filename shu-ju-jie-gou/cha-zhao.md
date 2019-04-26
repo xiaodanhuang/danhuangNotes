@@ -109,5 +109,41 @@ console.log(arr)
 
 #### 5.归并排序
 
+原理：将数组分成2个数组排好序合在一起 ，2个小数组再分再he.....
+
+```js
+//归并
+function mergeSort(arr,left,right){
+    if(left==right){
+        return
+    }
+    var mid=left+ Math.floor((right-left)/2)
+    mergeSort(arr,left,mid)
+    mergeSort(arr,mid+1,right)
+    mergeArr(arr,left,mid+1,right)
+
+
+}
+//合并数组
+function mergeArr(arr,left,right,rightBound){
+    var new_arr=[]
+    var  i=left,j=right;
+    while(i<right&&j<=rightBound){
+        new_arr.push(arr[i]<arr[j]?arr[i++]:arr[j++])
+    }
+    while(i<right){
+        new_arr.push(arr[i++])
+    }
+    while(j<=rightBound){
+        new_arr.push(arr[j++])
+    }
+    for(var i=0;i<new_arr.length;i++){
+        arr[left+i]=new_arr[i]
+    }
+}
+```
+
+
+
 
 
