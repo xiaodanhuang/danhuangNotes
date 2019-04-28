@@ -54,7 +54,7 @@ console.log(arr)
 
 #### 3.插入排序
 
-原理：将一个元素插入到一个有序列表中
+###### 原理：将一个元素插入到一个有序列表中
 
 ```js
 function insertSort(arr){
@@ -81,7 +81,7 @@ console.log(arr)
 
 #### 4.希尔排序ps:这个排序忘记怎么写了又看书了
 
-原理：取增量，进行分组排，再进行插入排序
+###### 原理：取增量，进行分组排，再进行插入排序
 
 ```js
 function shellSort(arr,gap){
@@ -109,7 +109,7 @@ console.log(arr)
 
 #### 5.归并排序
 
-原理：将数组分成2个数组排好序合在一起 ，2个小数组再分再he.....
+###### 原理：将数组分成2个数组排好序合在一起 ，2个小数组再分再he.....
 
 ```js
 //归并
@@ -145,7 +145,7 @@ function mergeArr(arr,left,right,rightBound){
 
 #### 6快速排序
 
-原理：以某个数为基准 ，比他小的放它左边，比他大的放它右边
+###### 原理：以某个数为基准 ，比他小的放它左边，比他大的放它右边
 
 ```js
 function quickSort(arr,left,right){
@@ -183,7 +183,7 @@ console.log(arr)
 
 #### 7.堆排序
 
-原理：构造完全二叉树 进行调换排序
+###### 原理：构造完全二叉树 进行调换排序
 
 ```js
 //堆排序
@@ -222,6 +222,126 @@ var heap=[2,5,3,1,10,4]
 heapSort(heap)
 console.log(heap)
 ```
+
+#### 8.计数排序
+
+###### 原理：计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中，使用此法，必须是整数的排序。
+
+```js
+function countingSort(arr,max){
+    var bucket=new Array(max+1)//其实这个max 有没有都无所谓，毕竟js
+    for(var i=0;i<arr.length;i++){
+        if(!bucket[arr[i]]){
+        bucket[arr[i]]++
+    }
+    var sortedIndex=0;
+    for(var j=0;j<bucket.length;j++){
+        while(bucket[j]){
+            arr[sortedIndex++]=j
+            bucket[j]--
+        }
+
+    }
+
+
+}
+function max(arr) {
+    var max=0
+   for(var i=0;i<arr.length;i++){
+
+       max=max<arr[i]?arr[i]:max
+   }
+   return max
+}
+var arr=[2,1,7,8,3,6,9]
+countingSort(arr, max(arr))
+console.log(arr)
+```
+
+#### 9.桶排序
+
+###### 原理:升级版的计数排序
+
+```js
+function bucketSort(arr){
+    var min=arr[0],max=arr[0];
+    for(i=0;i<arr.length;i++){
+        min=min>arr[i]?arr[i]:min;
+        max=max<arr[i]?arr[i]:max
+    }
+    var bucketSize=5;
+    var bucketCount=Math.floor((max-min)/bucketSize)+1
+    var bucket=new Array(bucketCount);
+    for( var j=0;j<arr.length;j++){
+        bucket[j]=[]
+    }
+
+    arr.map(item=>{
+        bucket[Math.floor((item - min) / bucketSize)].push(item);
+    })
+    arr=[]
+    bucket.map(item=>{
+        item.sort()
+        arr=arr.concat(item)
+    })
+    return arr
+}
+var arr=[7,6,9,4,0,5]
+
+console.log(bucketSort(arr))
+```
+
+#### 10.基数排序
+
+###### 原理：根据键值的每位数字来分配桶
+
+```js
+function lsdRadixSort(arr,max){
+    var num=0,sortIndex=0;
+    while(Math.floor(max/10)){
+        num++
+        max/=10
+    }
+    while(sortIndex<=num){
+        arr=bucket(arr,sortIndex)
+        console.log(arr)
+        sortIndex++
+    }
+
+}
+function bucket(arr,num){
+    var bucket=[];
+    for(var i=0;i<10;i++){
+        bucket[i]=[]
+    }
+    arr.map(item=>{
+
+        bucket[Math.floor(item/Math.pow(10,num))%10].push(item);
+    })
+    arr=[];
+    bucket.map(item=>{
+        arr=arr.concat(item)
+    })
+
+    return  arr
+
+}
+function max(arr) {
+    var max=0
+    for(var i=0;i<arr.length;i++){
+
+        max=max<arr[i]?arr[i]:max
+    }
+    return max
+}
+
+var arr=[170,45,75,90,802,2,24,66];
+lsdRadixSort(arr,max(arr))
+```
+
+-2019.4.28
+
+
 
 
 
