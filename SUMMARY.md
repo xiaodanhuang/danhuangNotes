@@ -7,6 +7,6 @@
   * [栈和队列](shu-ju-jie-gou/zhan-he-dui-lie.md)
   * [树和二叉树](shu-ju-jie-gou/shu-he-er-cha-shu.md)
   * [图](shu-ju-jie-gou/tu.md)
-  * [排序](shu-ju-jie-gou/cha-zhao.md)
   * [查找](pai-xu.md)
+  * [排序](shu-ju-jie-gou/cha-zhao.md)
 
