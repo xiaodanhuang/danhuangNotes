@@ -2,10 +2,16 @@
 
 * 数值类  
 
-
-  |  |  |
-  | :--- | :--- |
-  |  |  |
+| 数据类型 | 含义 |
+| :--- | :--- |
+| tinyint |  |
+| smallint |  |
+| mediumint |  |
+| int/integer |  |
+| bigint |  |
+| float |  |
+| double |  |
+| decimal |  |
 
 * 日期类  
   \| 数据类型 \| 含义 \|  
