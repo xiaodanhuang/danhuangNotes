@@ -15,4 +15,5 @@
   * [mysql数据类型](dui-shu-ju-ku-jin-xing-zeng-shan-gai-cha.md)
   * [对数据库的操作](mysqlshu-ju-lei-xing.md)
   * [对数据表的操作](dui-shu-ju-biao-de-cao-zuo.md)
+  * [对表数据的操作](dui-biao-shu-ju-de-cao-zuo.md)
 
