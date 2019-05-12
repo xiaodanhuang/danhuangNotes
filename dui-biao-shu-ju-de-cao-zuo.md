@@ -77,7 +77,22 @@ select* from person order by person_id desc
 
 #### 八.GROUP BY 语句
 
+###### GROUP BY 语句根据一个或多个列对结果集进行分组
 
+```
+SELECT column_name, function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name;
+```
+
+#### 九 .连接的使用
+
+###### INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录。
+
+###### LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录。
+
+###### RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。
 
 
 
