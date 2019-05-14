@@ -81,7 +81,7 @@ typeof b //undefined
 
 #### 四.强制类型转换
 
-1.转换为string 
+1.转换为string
 
 ```
 var a=1;
@@ -119,6 +119,8 @@ console.log(Boolean(""))//false  除空串都为
 console.log(Boolean(0))//false
 console.log(Boolean(undefined))//false
 console.log(Boolean(null))//false 对象转换为true
+//！！
+console.log(!!6)//true
 ```
 
 #### 五.运算符
@@ -139,6 +141,48 @@ console.log(3/2)//1.5
 ```
 console.log(1+ +"2"+3) // 6 
 -true// -1 负 -其他类型 转换mber 变负
+```
+
+3.自增自减
+
+```
+var a=1;
+console.log(a++)//1
+console.log(a)//2
+console.log(++a)//3
+console.log(a)//3
+console.log(a--)//3
+console.log(a)//2
+console.log(--a)//1
+console.log(a)//1
+```
+
+4.逻辑运算符&& \|\| ！
+
+```
+//&&
+console.log(true&&false)//false
+console.log(1&&2)//2 首为true 返后
+console.log(1&&0)//0 首为true 返后
+console.log(NAN&&0)//NAN 首为false,返首
+
+//||
+console.log(true||false)//true
+console.log(2||1)// 2首为true 返首
+console.log(0||1)//1 首为false,返后
+
+//！
+console.log(!true)//false
+```
+
+5.赋值运算符=   +=   -= \*=
+
+6.关系运算符 &gt;  &lt;  &gt;=  &lt;=  == ===
+
+```
+console.log(5>null)//true 其他类型跟数字比较  其他转换成数字
+console.log("11"<"5")//true 字符类型比较 转换unicode编码
+console.log("abc"<"b")//true 一位一位比较
 ```
 
 
