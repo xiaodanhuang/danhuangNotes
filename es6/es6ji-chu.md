@@ -166,7 +166,44 @@ Number.EPSILON
 
 ```
 //函数的默认值
+function myself (name="danhuang",sex="female"){
+ console.log(name,sex)
+}
+myself("xiaobao")// xiaobao female
 
+//rest 参数
+function add (arr,...item){
+    console.log(...item)
+}
+add([1,2,3],1,3,4,5,6)// 1 2 3 4 5 6
+
+//规定只要函数参数使用了默认值、解构赋值、或者扩展运算符，那么函数内部就不能显式设定为严格模式
+
+//name
+let  a =function add (arr,...item){
+    console.log(...item)
+}
+console.log(a.name)//add
+
+//箭头函数 固定this 指向
+var f = () => 5;
+// 等同于
+var f = function () { return 5 };
+var id = 21;
+function foo() {
+    setTimeout(function () {
+        console.log('id:', this.id);
+    }, 100);
+}
+foo.call({ id: 42 });//id:21
+function foo() {
+    setTimeout(()=> {
+        console.log('id:', this.id);
+    }, 100);
+}
+
+
+foo.call({ id: 42 });//id:42
 ```
 
 
