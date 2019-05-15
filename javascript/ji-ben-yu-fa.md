@@ -177,15 +177,22 @@ console.log(!true)//false
 
 5.赋值运算符=   +=   -= \*=
 
-6.关系运算符 &gt;  &lt;  &gt;=  &lt;=  == ===
+6.关系运算符 &gt;  &lt;  &gt;=  &lt;=  == ===  != !==
 
 ```
 console.log(5>null)//true 其他类型跟数字比较  其他转换成数字
 console.log("11"<"5")//true 字符类型比较 转换unicode编码
 console.log("abc"<"b")//true 一位一位比较
+console.log(null==0)//false
+console.log(undefined==null)//true
+console.log(NAN==NAN)//NAN不和任何值相等
 ```
 
+7.条件运算符 表达式？语句1:语句2
 
+8.运算符的优先级
+
+#### 六.流程控制语句
 
 
 

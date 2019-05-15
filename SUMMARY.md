@@ -13,7 +13,7 @@
   * [hello world](javascript/hello-world.md)
   * [基本语法](javascript/ji-ben-yu-fa.md)
 * [es6](es6.md)
-  * es6基础
+  * [es6基础](es6/es6ji-chu.md)
 * [mysql](mysql.md)
   * [概述](gai-shu.md)
   * [mysql数据类型](dui-shu-ju-ku-jin-xing-zeng-shan-gai-cha.md)
