@@ -206,5 +206,44 @@ function foo() {
 foo.call({ id: 42 });//id:42
 ```
 
+#### 七.数组的扩展
+
+```
+//...扩展运算符
+console.log(...[1, 2, 3]) 1 2 3
+
+//Array.from()  类似数组的对象以及可遍历的对象转换成数组
+let obj={
+    '0':"one",
+    '1':"tow",
+    '2':"three",
+    length:4
+}
+let arr=Array.from(obj)
+console.log(arr)//[ 'one', 'tow', 'three' ]
+
+//Array.of() 数值转数组
+console.log(Array.of(1,2,3))//[1,2,3]
+
+// copyWithin()
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3))//[ 4, 5, 3, 4, 5 ]
+
+// find() 和 findIndex() 查找
+console.log([1, 2, 3, 4, 5].find((item)=>item>3))//4
+console.log([1, 2, 3, 4, 5].findIndex((item)=>item>3))//3
+
+// fill()
+console.log([1,2,3,4].fill("a")) //['a','a','a','a']
+
+//entries()键和值，keys()键 和 values()值
+
+//includes() 
+console.log([1,2,3,4].includes("a"))//false
+
+// flat()，flatMap() 
+
+//数组的空位
+```
+
 
 
