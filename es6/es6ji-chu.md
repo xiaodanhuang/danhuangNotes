@@ -245,5 +245,27 @@ console.log([1,2,3,4].includes("a"))//false
 //数组的空位
 ```
 
+#### 八.对象的扩展
+
+```
+//属性的简洁表示法
+let name="danhuang"
+let obj={name}
+console.log(obj)//{ name: 'danhuang' }
+
+//属性名表达式
+let obj={}
+obj["a"+'bc']=1
+console.log(obj)//{ abc: 1 }
+
+//属性的可枚举性和遍历
+
+//属性的遍历 
+
+//super 关键字 指向原型
+
+//...  es2018对象的扩展运算符
+```
+
 
 
