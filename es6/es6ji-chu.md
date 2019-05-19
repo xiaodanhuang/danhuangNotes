@@ -267,5 +267,20 @@ console.log(obj)//{ abc: 1 }
 //...  es2018对象的扩展运算符
 ```
 
+#### 九对象新增函数
+
+```
+//Object.is()  同值相等
+console.log(Object.is({},{}))//false
+
+//Object.assign() 对象合并 ps :浅拷贝 同名属性替换  数组会看做成对象 只能进行值的复制
+console.log(Object.assign({sex:"female"},{name:"danhuang"}))//{ sex: 'female', name: 'danhuang' }
+
+//Object.getOwnPropertyDescriptor()  返回某个对象属性的描述对象
+
+//__proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()
+ //遍历 Object.keys()，Object.values()，Object.entries() Object.fromEntries() 
+```
+
 
 
