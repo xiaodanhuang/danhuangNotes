@@ -194,5 +194,11 @@ console.log(NAN==NAN)//NAN不和任何值相等
 
 #### 六.流程控制语句
 
+1.条件控制语句 if switch 
+
+2.循环语句：while  for 
+
+
+
 
 
