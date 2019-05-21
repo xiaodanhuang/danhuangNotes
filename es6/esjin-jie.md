@@ -163,5 +163,59 @@ console.log(JsonToMap(mapToJson(map)))//Map { '0' => [ 'danhuang', 'name' ], '1'
 //WeakMap只有四个方法可用：get()、set()、has()、delete()。
 ```
 
+#### 三.proxy
+
+###### 1.概述
+
+用于修改某些操作的默认行为。Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。
+
+2.get ,set
+
+```
+let person={name:'danhuang'}
+var proxy = new Proxy(person, {
+    get(target, propertyKey, receiver) {
+        console.log('GET ' + propertyKey);
+        return target[propertyKey];
+    },
+    set(target,key,value){
+        if(key in target){
+            console.log('modify')
+        }else{
+            console.log('add')
+        }
+        return value
+    }
+});
+console.log(proxy.name)//danhuang
+console.log(proxy.sex="female")//female
+```
+
+3.Proxy.revocable\(\)
+
+4.this 问题
+
+#### 四.reflect
+
+1.概述
+
+reflect 让Object操作都变成函数行为。
+
+2.静态方法
+
+* Reflect.apply\(target, thisArg, args\)
+* Reflect.construct\(target, args\)
+* Reflect.get\(target, name, receiver\)
+* Reflect.set\(target, name, value, receiver\)
+* Reflect.defineProperty\(target, name, desc\)
+* Reflect.deleteProperty\(target, name\)
+* Reflect.has\(target, name\)
+* Reflect.ownKeys\(target\)
+* Reflect.isExtensible\(target\)
+* Reflect.preventExtensions\(target\)
+* Reflect.getOwnPropertyDescriptor\(target, name\)
+* Reflect.getPrototypeOf\(target\)
+* Reflect.setPrototypeOf\(target, prototype\)
+
 
 

@@ -279,7 +279,7 @@ console.log(Object.assign({sex:"female"},{name:"danhuang"}))//{ sex: 'female', n
 //Object.getOwnPropertyDescriptor()  返回某个对象属性的描述对象
 
 //__proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()
- //遍历 Object.keys()，Object.values()，Object.entries() Object.fromEntries() 
+ //遍历 Object.keys()，Object.values()，Object.entries() Object.fromEntries()
 ```
 
 
