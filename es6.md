@@ -4,6 +4,8 @@
 2. set,map
 3. proxy
 4. reflect
+5. promise
+6. iterator
 
 
 

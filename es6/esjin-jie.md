@@ -217,5 +217,49 @@ reflect 让Object操作都变成函数行为。
 * Reflect.getPrototypeOf\(target\)
 * Reflect.setPrototypeOf\(target, prototype\)
 
+#### 五.promise对象
+
+1.概述
+
+异步编程的解决方案
+
+```
+const getJSON = function(url) {
+    const promise = new Promise(function(resolve, reject){
+        const handler = function() {
+            if (this.readyState !== 4) {
+                return;
+            }
+            if (this.status === 200) {
+                resolve(this.response);
+            } else {
+                reject(new Error(this.statusText));
+            }
+        };
+        const client =  new XMLHttpRequest();
+        client.open("GET", url);
+        client.onreadystatechange = handler;
+        client.responseType = "json";
+        client.setRequestHeader("Accept", "application/json");
+        client.send();
+
+    });
+
+    return promise;
+};
+
+getJSON("https://baidu.com").then(function(json) {
+    console.log('Contents: ' + json);
+}).catch((function(error) {
+    console.log('false');
+})).finally(function(){console.log("end")});//false end
+```
+
+#### 六.Iterator
+
+1.遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。
+
+Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令`for...of`循环，Iterator 接口主要供`for...of`消费。
+
 
 
