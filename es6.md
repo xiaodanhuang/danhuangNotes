@@ -6,6 +6,9 @@
 4. reflect
 5. promise
 6. iterator
+7. generator
+8. async 
+9. class
 
 
 

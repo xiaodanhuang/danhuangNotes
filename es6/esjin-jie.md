@@ -257,9 +257,64 @@ getJSON("https://baidu.com").then(function(json) {
 
 #### 六.Iterator
 
-1.遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。
+1.概述
+
+遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。
 
 Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令`for...of`循环，Iterator 接口主要供`for...of`消费。
+
+#### 七.generator
+
+1.概述
+
+Generator 函数是 ES6 提供的一种异步编程解决方案
+
+```
+function *helloworldGenerator(){
+    yield 'hello';
+    yield 'world';
+    return 'finish'
+}
+let hw =helloworldGenerator()
+console.log(hw.next()) //{ value: 'hello', done: false }
+console.log(hw.next())//{ value: 'world', done: false }
+console.log(hw.next())//{ value: 'finish', done: true }
+console.log(hw.next())//{ value: undefined, done: true }
+```
+
+#### 八.async
+
+#### 九.class
+
+```
+class Person{
+    constructor(name,sex){
+        this.name=name;
+        this.sex=sex
+    }
+    getName(){
+        return this.name
+    }
+    setName(name){
+        this.name=name
+    }
+
+}
+class  Friends  extends Person{
+    constructor(name,sex,whos){
+        super(name,sex);
+        this.whos=whos
+    }
+    getWhos(){
+        this.whos.whos
+    }
+
+}
+let danhuang=new Friends("danhuang",'female','mango')
+console.log(danhuang.getName())
+danhuang.setName("xiaodanhuang")
+console.log(danhuang)//Friends { name: 'xiaodanhuang', sex: 'female', whos: 'mango' }
+```
 
 
 
