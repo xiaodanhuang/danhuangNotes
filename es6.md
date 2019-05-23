@@ -9,6 +9,7 @@
 7. generator
 8. async 
 9. class
+10. module
 
 
 
