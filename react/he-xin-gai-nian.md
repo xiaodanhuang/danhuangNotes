@@ -3,13 +3,13 @@
 * ##### React是什么？
 * ##### JXS
 * ##### 函数组件&类组件
-
 * ##### state&props
 * ##### 事件处理
 * ##### 条件渲染
 * ##### 列表 和key
 * ##### 表单
 * ##### 组合&继承
+* ##### 生命周期
 
 #### React是什么？
 
@@ -59,9 +59,9 @@ class Welcome extends React.Component  {
 
 #### state&props
 
- state：组件内部数据的维护使用state 可变 使用this.setState
+state：组件内部数据的维护使用state 可变 使用this.setState
 
- props：父组件传递给子组件的数据**  在子组件中只读**
+props：父组件传递给子组件的数据**  在子组件中只读**
 
 ```
 class Welcome extends React.Component  {
@@ -183,7 +183,13 @@ class Welcome extends React.Component {
     }
 ```
 
+#### 生命周期
 
+![](/assets/生命周期.png)
+
+v16.x
+
+![](/assets/生命周期v6.png)
 
 
 
