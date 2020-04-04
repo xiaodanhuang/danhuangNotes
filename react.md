@@ -22,21 +22,31 @@
 
    Vue:
 
-   ```
          props /emit
+
+
 
          event bus ：emit /on
 
+
+
          provide /inject
+
+
 
    React:
 
+
+
         props
+
+
 
         ref
 
+
+
         context
-   ```
 
 5.渲染方式不同
 
