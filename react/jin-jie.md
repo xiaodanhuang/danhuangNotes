@@ -2,6 +2,7 @@
 
 * ##### context
 * ##### error boundaries
+* ##### Refs转发
 
 #### context
 
@@ -73,6 +74,51 @@
         ReactDOM.render(<App/>, document.getElementById('root'))
 
 #### error boundaries
+
+可以捕获并打印发生在其子组件树任何位置的 JavaScript 错误，并且，它会渲染出备用 UI
+
+错误边界无法捕获以下场景中产生的错误：事件处理，异步，服务端渲染，自身抛出的错误。
+
+```
+class ErrorBoundary extends React.Component{
+        constructor(){
+            super();
+            this.state={
+                has_error:false
+            }
+        }
+        static getDerivedStateFromError(error) {
+            // 更新 state 使下一次渲染能够显示降级后的 UI
+            return { has_error: true };
+        }
+        render(){
+           if(this.state.has_error){
+               return (
+                   <div>报错了，兄弟</div>
+               )
+           }
+           return this.props.children
+        }
+    }
+    class Error extends React.Component{
+        constructor(){
+            super()
+            this.state={
+                user:null
+            }
+        }
+        render(){
+            return(
+                <div>{this.state.user.name}</div>
+            )
+        }
+    }
+ReactDOM.render(<ErrorBoundary><Error/></ErrorBoundary>, document.getElementById('root'))
+```
+
+#### Refs转发
+
+
 
 
 
