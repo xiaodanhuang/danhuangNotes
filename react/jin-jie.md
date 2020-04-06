@@ -8,7 +8,7 @@
 
 跨层级的数据传递（地区偏好/UI主题）
 
-    const ThemeContext = React.createContext({
+        const ThemeContext = React.createContext({
             theme:'light',
             toggleTheme:()=>{}
         })
@@ -80,7 +80,7 @@
 错误边界无法捕获以下场景中产生的错误：事件处理，异步，服务端渲染，自身抛出的错误。
 
 ```
-class ErrorBoundary extends React.Component{
+     class ErrorBoundary extends React.Component{
         constructor(){
             super();
             this.state={
@@ -99,7 +99,7 @@ class ErrorBoundary extends React.Component{
            }
            return this.props.children
         }
-    }
+     }
     class Error extends React.Component{
         constructor(){
             super()
@@ -118,7 +118,35 @@ ReactDOM.render(<ErrorBoundary><Error/></ErrorBoundary>, document.getElementById
 
 #### Refs转发
 
+我们用ref绑定元素，refs转发又是啥子意思哦？ 将ref转发给其子组件
 
+```
+    const Input = React.forwardRef((props, ref) => (
+        <input ref={ref}/>
+    ));
+
+    class App extends React.Component {
+        constructor() {
+            super()
+            this.myRef = React.createRef();
+        }
+
+        focus = () => {
+            console.log(this.myRef.current.focus())
+
+        }
+
+        render() {
+            return (
+                <div>
+                    <Input ref={this.myRef}/>
+                    <button onClick={this.focus}>聚焦</button>
+                </div>
+            )
+        }
+    }
+
+```
 
 
 
