@@ -6,6 +6,8 @@
 * ##### Fragments
 * ##### 高阶组件
 * ##### 深入JSX
+* ##### 性能优化
+* #### Portals
 
 #### context
 
@@ -428,13 +430,13 @@ function HigherOrderComponent(WrappedComponent) {
 #### 深入JSX
 
 > SX 仅仅只是`React.createElement(component, props, ...children)`函数的语法糖
-
+>
 > React组件大写，元素小写，这样可以区分组件和元素
-
+>
 > React 必须在作用域内
-
+>
 > 在 JSX 类型中使用点语法
-
+>
 > 在运行时选择类型
 
 你不能将通用表达式作为 React 元素类型。如果你想通过通用表达式来（动态）决定元素类型，你需要首先将它赋值给大写字母开头的变量
@@ -459,13 +461,36 @@ function Story(props) {
 ```
 
 > Props 默认值为 “True”
-
+>
 > JSX 中的子元素
 
 包含在开始和结束标签之间的 JSX 表达式内容将作为特定属性`props.children`传递给外层组件
 
 > 布尔类型、Null 以及 Undefined 将会忽略
 
-  
+#### 性能优化
+
+基本上`React.PureComponent`和`shouldComponentUpdate`可以减少不必要的UI重新渲染。**其他性能优化方案待补充**
+
+#### Portals
+
+```
+function Modal (props){
+    return ReactDOM.createPortal(props.children,props.el)
+}
+function Partals(){
+    const el=document.getElementById("modal")
+    return (
+        <div>
+           <Modal el={el}>
+               <div>
+                   我是一个modal
+               </div>
+           </Modal>
+        </div>
+    )
+}
+```
+
 
 
