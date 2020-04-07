@@ -3,6 +3,8 @@
 * ##### context
 * ##### error boundaries
 * ##### Refs转发
+* ##### Fragments
+* ##### 高阶组件
 
 #### context
 
@@ -145,8 +147,39 @@ ReactDOM.render(<ErrorBoundary><Error/></ErrorBoundary>, document.getElementById
             )
         }
     }
+```
+
+#### Fragments
+
+React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。
 
 ```
+    class App extends React.Component {
+        constructor() {
+            super()
+            this.state={
+                list:['苹果','橙子']
+            }
+        }
+
+        render() {
+            return (
+                <React.Fragment>
+                    {
+                        this.state.list.map((item,index)=><li key={index}>{item}</li>)
+                    }
+                </React.Fragment>
+            )
+        }
+    }
+
+```
+
+#### 高阶组件
+
+高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。 高阶组件是一个函数，参数是一个组件，返回一个新的组件。
+
+**组件是将 props 转换为 UI，而高阶组件是将组件转换为另一个组件。**
 
 
 
