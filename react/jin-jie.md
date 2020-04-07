@@ -195,7 +195,7 @@ React 中的一个常见模式是一个组件返回多个元素。Fragments 允�
 
 > 属性代理
 
-1. 操作props&通过 props 实现条件渲染
+1.操作props&通过 props 实现条件渲染
 
 ```
 // 返回一个无状态的函数组件
@@ -217,7 +217,7 @@ function HOC(WrappedComponent) {
 
 通过属性代理方式实现的高阶组件包装后的组件可以拦截到父组件传递过来的props
 
-    2. 抽象state
+2.抽象state
 
 需要注意 ⚠️的是，通过属性代理方式实现的高阶组件无法直接操作原组件的state，但是可以通过props和回调函数对state
 
@@ -241,7 +241,7 @@ function  Hoc (HocChildren){
 }
 ```
 
-   3.获取 refs 引用，获取原组件的 static 方法，用其他元素包裹传入的组件
+3.获取 refs 引用，获取原组件的 static 方法，用其他元素包裹传入的组件
 
 ```
 class User extends React.Component{
@@ -296,5 +296,131 @@ function  Hoc (HocChildren){
 }
 ```
 
+> 反向继承
 
+反向继承指的是使用一个函数接受一个组件作为参数传入，并返回一个继承了该传入组件的类组件，且在返回组件的`render()`方法中返回`super.render()`方法，最简单的实现如下：
+
+```
+const HOC = (WrappedComponent) => {
+  return class extends WrappedComponent {
+    render() {
+      return super.render();
+    }
+  }
+}
+```
+
+相较于属性代理方式，使用反向继承方式实现的高阶组件的特点是允许高阶组件通过 `this`访问到原组件，所以可以直接读取和操原组件的 `state`/`ref`生命周期方法。反向继承方式实现的高阶组件可以通过 `super.render()`方法获取到传入组件实例的 `ender` 结果，所以可对传入组件进行渲染劫持
+
+1.劫持原组件生命周期方法，读取/操作原组件的 state，条件渲染
+
+```
+class User extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            count:1
+        }
+    }
+    render(){
+        return (
+            <div>
+                {this.state.count}
+            </div>
+        )
+    }
+}
+function  Hoc (HocChildren){
+    let didMout=HocChildren.prototype.componentDidMount
+    return class HocContainer extends HocChildren{
+        constructor(){
+            super();
+        }
+        async componentDidMount(){
+            if(didMout){
+                await didMout.apply(this)
+            }
+            this.setState({
+                count:2
+            })
+        }
+        render(){
+           if(this.props.is_render){
+               return super.render()
+           }else{
+               return <div>暂不渲染</div>
+           }
+        }
+    }
+}
+```
+
+2.修改 React 元素树
+
+```
+// 例子来源于《深入React技术栈》
+function HigherOrderComponent(WrappedComponent) {
+  return class extends WrappedComponent {
+    render() {
+      const tree = super.render();
+      const newProps = {};
+      if (tree && tree.type === 'input') {
+        newProps.value = 'something here';
+      }
+      const props = {
+        ...tree.props,
+        ...newProps,
+      };
+      const newTree = React.cloneElement(tree, props, tree.props.children);
+      return newTree;
+    }
+  };
+}
+```
+
+| 功能列表 |
+| :--- |
+
+
+| 属性代理 | 反向继承 |
+| :--- | :--- |
+
+
+| 原组件能否被包裹 | √ | √ |
+| :--- | :--- | :--- |
+
+
+| 原组件是否被继承 | × | √ |
+| :--- | :--- | :--- |
+
+
+| 能否读取/操作原组件的 `props` | √ | √ |
+| :--- | :--- | :--- |
+
+
+| 能否读取/操作原组件的 `state` | 乄 | √ |
+| :--- | :--- | :--- |
+
+
+| 能否通过 `ref` 访问到原组件的 `dom` 元素 | 乄 | √ |
+| :--- | :--- | :--- |
+
+
+| 是否影响原组件某些生命周期等方法 | √ | √ |
+| :--- | :--- | :--- |
+
+
+| 是否取到原组件 `static` 方法 | √ | √ |
+| :--- | :--- | :--- |
+
+
+| 能否劫持原组件生命周期方法 | × | √ |
+| :--- | :--- | :--- |
+
+
+| 能否渲染劫持 | 乄 | √ |
+| :--- | :--- | :--- |
+
+
+[https://juejin.im/post/5e169204e51d454112714580](https://juejin.im/post/5e169204e51d454112714580)
 
