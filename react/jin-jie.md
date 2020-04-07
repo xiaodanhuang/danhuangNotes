@@ -5,6 +5,7 @@
 * ##### Refs转发
 * ##### Fragments
 * ##### 高阶组件
+* ##### 深入JSX
 
 #### context
 
@@ -423,4 +424,48 @@ function HigherOrderComponent(WrappedComponent) {
 
 
 [https://juejin.im/post/5e169204e51d454112714580](https://juejin.im/post/5e169204e51d454112714580)
+
+#### 深入JSX
+
+> SX 仅仅只是`React.createElement(component, props, ...children)`函数的语法糖
+
+> React组件大写，元素小写，这样可以区分组件和元素
+
+> React 必须在作用域内
+
+> 在 JSX 类型中使用点语法
+
+> 在运行时选择类型
+
+你不能将通用表达式作为 React 元素类型。如果你想通过通用表达式来（动态）决定元素类型，你需要首先将它赋值给大写字母开头的变量
+
+```
+import { PhotoStory, VideoStory } from './stories';
+
+const components = {
+  photo: PhotoStory,
+  video: VideoStory
+};
+
+function Story(props) {
+  // 错误！JSX 类型不能是一个表达式。
+  return <components[props.storyType] story={props.story} />;
+}
+function Story(props) {
+  // 正确！JSX 类型可以是大写字母开头的变量。
+  const SpecificStory = components[props.storyType];
+  return <SpecificStory story={props.story} />;
+}
+```
+
+> Props 默认值为 “True”
+
+> JSX 中的子元素
+
+包含在开始和结束标签之间的 JSX 表达式内容将作为特定属性`props.children`传递给外层组件
+
+> 布尔类型、Null 以及 Undefined 将会忽略
+
+  
+
 
