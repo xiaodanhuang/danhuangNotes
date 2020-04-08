@@ -9,6 +9,7 @@
 * ##### 性能优化
 * ##### Portals
 * ##### 协调
+* ##### render props
 
 #### context
 
@@ -509,11 +510,8 @@ function Partals(){
 
 * Keys。头部插入会很影响性能，那么更变开销会比较大。为了解决以上问题，React 支持`key`属性
 
+#### render props
 
-
-
-
-  
 
 
 
