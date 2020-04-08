@@ -10,6 +10,9 @@
 * ##### Portals
 * ##### 协调
 * ##### render props
+* ##### PropTypes
+* ##### 受控组件和非受控组件
+* ##### Web Components
 
 #### context
 
@@ -512,7 +515,15 @@ function Partals(){
 
 #### render props
 
+#### PropTypes
 
+自 React v15.5 起，`React.PropTypes`已移入另一个包中。请使用[`prop-types`库](https://www.npmjs.com/package/prop-types)代替。
+
+#### 受控组件和非受控组件
+
+受控组件中，表单数据是由 React 组件来管理的。非受控组件，这时表单数据将交由 DOM 节点来处理
+
+#### Web Components
 
 
 
