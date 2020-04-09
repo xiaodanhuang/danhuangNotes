@@ -22,31 +22,31 @@
 
    Vue:
 
-         props /emit
+   ```
+     props /emit
+   ```
+
+```
+     event bus ：emit /on
 
 
 
-         event bus ：emit /on
+     provide /inject
+```
+
+React:
+
+```
+    props
 
 
 
-         provide /inject
+    ref
 
 
 
-   React:
-
-
-
-        props
-
-
-
-        ref
-
-
-
-        context
+    context
+```
 
 5.渲染方式不同
 
@@ -54,5 +54,5 @@ Vue：扩展HTML的形式   **指令**
 
 React：JSX  **原生JS**
 
-[https://juejin.im/post/5b8b56e3f265da434c1f5f76\#heading-4](https://juejin.im/post/5b8b56e3f265da434c1f5f76#heading-4 "资料来源")
+参考来源：[https://juejin.im/post/5b8b56e3f265da434c1f5f76\#heading-4](https://legacy.gitbook.com/book/xiaodanhuang/danhuangnotes/edit#)
 

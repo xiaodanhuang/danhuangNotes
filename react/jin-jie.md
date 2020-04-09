@@ -430,18 +430,18 @@ function HigherOrderComponent(WrappedComponent) {
 | :--- | :--- | :--- |
 
 
-[https://juejin.im/post/5e169204e51d454112714580](https://juejin.im/post/5e169204e51d454112714580)
+参考来源：[https://juejin.im/post/5e169204e51d454112714580](https://juejin.im/post/5e169204e51d454112714580)
 
 #### 深入JSX
 
 > SX 仅仅只是`React.createElement(component, props, ...children)`函数的语法糖
->
+
 > React组件大写，元素小写，这样可以区分组件和元素
->
+
 > React 必须在作用域内
->
+
 > 在 JSX 类型中使用点语法
->
+
 > 在运行时选择类型
 
 你不能将通用表达式作为 React 元素类型。如果你想通过通用表达式来（动态）决定元素类型，你需要首先将它赋值给大写字母开头的变量

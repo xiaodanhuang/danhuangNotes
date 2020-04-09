@@ -39,9 +39,9 @@ checkscope.[[scope]] = [
 
 5.将活动变量添加到执行上下文的作用域头部
 
- 6.修改活动变量将scope2修改，返回scope2的值
+6.修改活动变量将scope2修改，返回scope2的值
 
- 7.出执行栈
+7.出执行栈
 
 ##### 活动变量-arguments对象
 
@@ -71,6 +71,14 @@ bar(); // ???
 引擎会执行那些执行上下文位于栈顶的函数。当该函数执行结束时，执行上下文从栈中弹出，控制流程到达当前栈中的下一个上下文。
 
 ##### 作用域：代码有权访问其他函数以及变量的权限。代码定义的时候就决定了
+
+参考来源：[https://github.com/mqyqingfeng/Blog/issues/4](https://legacy.gitbook.com/book/xiaodanhuang/danhuangnotes/edit#)
+
+#### 闭包
+
+有权访问另一个函数作用域的活动对象的函数
+
+题目指路：[https://juejin.im/post/58f1fa6a44d904006cf25d22\#heading-0](https://juejin.im/post/58f1fa6a44d904006cf25d22#heading-0)
 
 
 
