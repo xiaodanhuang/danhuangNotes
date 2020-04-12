@@ -14,6 +14,7 @@
   * [this/call/apply/bind](javascript/thiscallapplybind.md)
   * [原型/继承](javascript/yuan-578b-ji-cheng.md)
   * [Promise](javascript/promise.md)
+  * [深浅拷贝](javascript/shen-qian-kao-bei.md)
 * [es6](es6.md)
   * [es6基础](es6/es6ji-chu.md)
   * [es6进阶](es6/esjin-jie.md)

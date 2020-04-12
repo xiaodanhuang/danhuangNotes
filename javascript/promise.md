@@ -7,7 +7,7 @@
 
 特点：
 
-* 有三种状态：`pending` \(进行中\)，`fulfilled `\(成功\)，`rejected` \(失败\)
+* 有三种状态：`pending` \(进行中\)，`fulfilled`\(成功\)，`rejected` \(失败\)
 * 一旦状态改变，就不会再变，任何时候都可以得到这个结果。`Promise`对象的状态改变，只有两种可能：从`pending`变为`fulfilled`和从`pending`变为`rejected`。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。const PENDING = 'pending', FULFILLED = 'fulfilled', REJECTED = 'rejected'
 
 ```
@@ -106,9 +106,11 @@ function resolvePromise(x, promise2, resolve, reject) {
 }
 ```
 
+参考来源:[https://juejin.im/post/5b2f02cd5188252b937548ab\#heading-9](https://juejin.im/post/5b2f02cd5188252b937548ab#heading-9)
+
 * async await
 
-
+async 其实是generator的语法糖
 
 
 
