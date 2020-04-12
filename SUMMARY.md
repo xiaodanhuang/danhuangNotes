@@ -15,6 +15,8 @@
   * [原型/继承](javascript/yuan-578b-ji-cheng.md)
   * [Promise](javascript/promise.md)
   * [深浅拷贝](javascript/shen-qian-kao-bei.md)
+  * [事件循环](javascript/shi-jian-xun-huan.md)
+  * [函数式编程](javascript/han-shu-shi-bian-cheng.md)
 * [es6](es6.md)
   * [es6基础](es6/es6ji-chu.md)
   * [es6进阶](es6/esjin-jie.md)
