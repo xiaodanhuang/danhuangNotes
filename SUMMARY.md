@@ -13,6 +13,7 @@
   * [执行上下文/作用域链/闭包](javascript/zhi-xing-shang-xia-6587-zuo-yong-57df-zuo-yong-yu-lian.md)
   * [this/call/apply/bind](javascript/thiscallapplybind.md)
   * [原型/继承](javascript/yuan-578b-ji-cheng.md)
+  * [Promise](javascript/promise.md)
 * [es6](es6.md)
   * [es6基础](es6/es6ji-chu.md)
   * [es6进阶](es6/esjin-jie.md)
