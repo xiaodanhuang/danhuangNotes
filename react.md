@@ -24,27 +24,17 @@
 
    ```
      props /emit
+     event bus ：emit /on
+     provide /inject
    ```
 
-```
-     event bus ：emit /on
 
 
-
-     provide /inject
-```
-
-React:
+        React:
 
 ```
     props
-
-
-
     ref
-
-
-
     context
 ```
 
